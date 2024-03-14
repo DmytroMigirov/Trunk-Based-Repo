@@ -32,6 +32,9 @@ def det(A):
 
 def inverse(A):
     result = []
+    det_A = det(A)
+    if det_A == 0:
+        return None  # Матрица вырожденная, обратной не существует
     for i in range(len(A)):
         result.append([])
         for j in range(len(A[0])):
